@@ -1,10 +1,10 @@
-public class Program {
-    public Program(boolean go){
+public class ProgramMenu{
+    public ProgramMenu(boolean go){
         while(go){
             menu();
             switch(Inputhandler.intChoice()){
                 case 1:
-                    Chat chat = new Chat();
+                    ChatProgram chatProgram = new ChatProgram(go);
                     break;
                 case 9:
                     go = false;
@@ -12,11 +12,11 @@ public class Program {
                     break;
             }
         }
-    }
 
+    }
     public String menu(){
         String help =
-                "1: Chat"+
+                "1: Chat Program" +
                 "9: Exit/Stop";
         return help;
     }
